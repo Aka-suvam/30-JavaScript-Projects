@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color:red;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    padding: 3vw 4vw;
+    font-size: 4vw;
+    margin: 2vw 3vw;
+    background-color: aqua;
+}
+
+button:hover{
+    background-color: red;
+}
+
+button:active{
+    background-color: blue;
+}
