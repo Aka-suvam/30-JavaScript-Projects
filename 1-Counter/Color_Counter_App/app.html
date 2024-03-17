@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour chnage Counter App Color with QuerySelector and forEach function </title>
+    <style>
+       
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+}
+
+button{
+    
+    padding:  0.1vw 0.7vw;
+    font-size: 2vw;
+    text-align: center;
+    border-radius: 0.3vw;
+    cursor: pointer;
+}
+
+h1{
+    
+    text-align: center;
+    margin: 10vw 0;
+    color:#102A42;
+    font-size: 100px;
+    
+}
+
+#counter{
+    color:black;
+    margin-left: 5px;
+}
+
+.colorr{
+    color: red;
+} 
+    </style>
+</head>
+<body>
+    
+    <h1>Counter :<span id="counter"> 0 </span> </h1>
+    <div id="btn">
+     <button class=" btn add">increament</button>   
+     <button class=" btn reset">Reset</button>
+     <button class=" btn sub">subtract</button>
+</div>
+
+
+    <script>
+       const value = document.querySelector("#counter");
+       const button=document.querySelectorAll(".btn"); 
+      let count=0;
+       
+        button.forEach((btns)=>{
+        btns.addEventListener("click",(e)=>{
+        const style=e.target.classList;
+        if(style.contains("add")){
+        count++;}
+        else if(style.contains("sub")){
+        count--;}
+        else {
+        count=0;}
+        value.innerText=count;
+        
+        if(count<0){
+            value.style.color='yellow';
+        }
+        else if (count>0){
+            value.style.color='red';
+        }
+        else {
+            value.style.color='black';
+        }
+            });
+        
+          
+       });
+
+    </script>
+
+</body>
+</html>
