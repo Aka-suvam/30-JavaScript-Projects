@@ -1,5 +1,6 @@
 //acces menu
 //addcss to ul 
+//next-time toggle
 const btn=document.querySelector(".hambergur");
 const nav=document.querySelector(".link");
 
